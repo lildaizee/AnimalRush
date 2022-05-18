@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes1/PunScreen.unity
     guid: 3f8f2baa3c2af1440ab1008327a4cd6e
+  - enabled: 1
+    path: Assets/EndlessRunning2.unity
+    guid: e81c9f9fce0788c4680a897cfb3198f7
   m_configObjects: {}

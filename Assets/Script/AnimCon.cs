@@ -6,7 +6,7 @@ public class AnimCon : MonoBehaviour
 {
     void Start()
     {
-        GetComponent<Animator>().Play("Jogging");
+        GetComponent<Animator>().Play("Fox_Run_InPlace");
     }
 
     void Update()

@@ -28,7 +28,7 @@ public class GameFlow : MonoBehaviour
 
     void Start()
     {
-        nextTileSpawn.z = 20;
+        nextTileSpawn.z = 24;
         //nilaiMarkah = GetComponent<TMP_Text>();
         StartCoroutine(spawnTile());
         scoreText.text = totalCoins.ToString() + " POINTS";
@@ -93,7 +93,7 @@ public class GameFlow : MonoBehaviour
             Instantiate(coinObj, nextCarSpawn, coinObj.rotation);
         }
 
-        nextTileSpawn.z += 4;
+        nextTileSpawn.z += 8;
         StartCoroutine(spawnTile());
 
 
