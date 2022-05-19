@@ -24,7 +24,7 @@ public class CreateandJoinRoom : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        SceneManager.LoadScene(gameScene);
+        SceneManager.LoadScene("EndlessRunning2");
         
     }
 }

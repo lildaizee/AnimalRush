@@ -7,8 +7,8 @@ using UnityEngine;
 public class APISystem : MonoBehaviour
 {
     const string URI = "http://api.tenenet.net";
-    const string token = "7c899bcbab7cce4a5d04f9cb92d7cde7";
-    const string leaderboard_id = "rank_run_endless";
+    const string token = "...";
+    const string leaderboard_id = "...";
 
     public ContainerA containerA; //user details
     public ContainerB containerB; //leaderboard details
