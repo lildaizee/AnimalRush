@@ -34,7 +34,7 @@ public class Login : MonoBehaviour
             FindObjectOfType<APISystem>().Register(userName.text, userName.text, userName.text, userName.text);
             Debug.Log(userName.text);
             Debug.Log("My name is : " + PlayerPrefs.GetString("username"));
-            SceneManager.LoadScene(sceneMenu);
+            SceneManager.LoadScene("Multiplayer");
         }
     }
 
@@ -48,6 +48,12 @@ public class Login : MonoBehaviour
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         SceneManager.LoadScene("PunScreen");
+    }
+
+    public void LoginScreen()
+    {
+        
+        SceneManager.LoadScene("Login");
     }
 
 }
