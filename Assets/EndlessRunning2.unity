@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MainMenuScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 9208485448297228855, guid: 948fba687ef94b94cb285055abaf0c70, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -70
+      objectReference: {fileID: 0}
     - target: {fileID: 9208485448708116104, guid: 948fba687ef94b94cb285055abaf0c70, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.000015259
@@ -395,13 +399,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9208485449857791729, guid: 948fba687ef94b94cb285055abaf0c70, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9208485449857791743, guid: 948fba687ef94b94cb285055abaf0c70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9208485449857791743, guid: 948fba687ef94b94cb285055abaf0c70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1720630996}
     - target: {fileID: 9208485449857791743, guid: 948fba687ef94b94cb285055abaf0c70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: leaderboardScreen
+      value: changeScene
       objectReference: {fileID: 0}
     - target: {fileID: 9208485450327522193, guid: 948fba687ef94b94cb285055abaf0c70, type: 3}
       propertyPath: m_Name

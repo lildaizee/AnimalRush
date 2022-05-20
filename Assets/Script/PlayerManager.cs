@@ -47,4 +47,9 @@ public class PlayerManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void changeScene(string value)
+    {
+        SceneManager.LoadScene(value);
+    }
+
 }
