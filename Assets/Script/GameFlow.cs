@@ -20,6 +20,8 @@ public class GameFlow : MonoBehaviour
     public static int totalCoins = 0;
     public Transform coinObj;
     private Vector3 nextCoinSpawn;
+    public Transform mushroom;
+
 
     public Text scoreText;
     public int score = 0;
@@ -70,7 +72,7 @@ public class GameFlow : MonoBehaviour
             randX = 0;
         }
 
-        randChoice = Random.Range(0, 3);
+        randChoice = Random.Range(0, 4);
         if (randChoice == 0)
         {
             nextHalanganSpawn3.z = nextTileSpawn.z;
@@ -85,16 +87,43 @@ public class GameFlow : MonoBehaviour
             nextCarSpawn.x = randX;
             Instantiate(car, nextCarSpawn, car.rotation);
         }
-        else
+        else if (randChoice == 2)
         {
             nextCarSpawn.z = nextTileSpawn.z;
             nextCarSpawn.y = .35f;
             nextCarSpawn.x = randX;
             Instantiate(coinObj, nextCarSpawn, coinObj.rotation);
         }
+        else
+        {
+            nextCarSpawn.z = nextTileSpawn.z;
+            nextCarSpawn.y = .35f;
+            nextCarSpawn.x = randX;
+            Instantiate(mushroom, nextCarSpawn, mushroom.rotation);
+        }
+
+        //else
+        //{
+        //    nextCarSpawn.z = nextTileSpawn.z;
+        //    nextCarSpawn.y = .35f;
+        //    nextCarSpawn.x = randX;
+        //    CreateCoins(10);
+        //}
 
         nextTileSpawn.z += 8;
         StartCoroutine(spawnTile());
+
+        //void CreateCoins(int coinsNum)
+        //{
+        //    for(int i = 0; i < coinsNum; i++)
+        //    {
+        //        //GameObject CoinClone = Instantiate(coinObj, new Vector3(i, coinObj.position.y, i), coinObj.rotation)
+        //        //Instantiate(coinObj, new Vector3(i, coinObj.position.y, i), coinObj.rotation);
+        //        Instantiate(coinObj, nextCarSpawn, coinObj.rotation);
+
+
+        //    }
+        //}
 
 
         //Instantiate(tileObj, nextTileSpawn, tileObj.rotation);

@@ -63,7 +63,7 @@ public class RunningDead : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    private void OnTriggerEnter(Collider other)
+    IEnumerator OnTriggerEnter(Collider other)
     {
         if (other.tag == "obstacle")
         {
@@ -74,8 +74,33 @@ public class RunningDead : MonoBehaviour
             StartCoroutine(saveScore());
 
         }
-        
+
+        if (other.tag == "Invisible")
+        {
+            //if (other.tag == "Gem")
+            //{
+            //    GameFlow.totalCoins += 1;
+            //    Debug.Log(GameFlow.totalCoins);
+            //    Destroy(gameObject);
+            //}
+               
+            Debug.Log("Invisible");
+            GetComponent<Collider>().enabled = false;
+            yield return new WaitForSeconds(10);
+            GetComponent<Collider>().enabled = true;
+
+            //StartCoroutine(enableCollider());
+
+        }
+
+
+
     }
+    //IEnumerator enableCollider()
+    //{
+    //    yield return new WaitForSeconds(10);
+    //    //colliderChar.enabled = !colliderChar.enabled;
+    //}
 
     IEnumerator saveScore()
     {
