@@ -34,26 +34,26 @@ public class Login : MonoBehaviour
             FindObjectOfType<APISystem>().Register(userName.text, userName.text, userName.text, userName.text);
             Debug.Log(userName.text);
             Debug.Log("My name is : " + PlayerPrefs.GetString("username"));
-            SceneManager.LoadScene("Multiplayer");
+            SceneManager.LoadScene("ChooseCharacter");
         }
     }
 
-    public void GameScreen()
-    {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        SceneManager.LoadScene("EndlessRunning");
-    }
+    //public void GameScreen()
+    //{
+    //    //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    //    SceneManager.LoadScene("EndlessRunning");
+    //}
 
-    public void PUN()
-    {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        SceneManager.LoadScene("PunScreen");
-    }
+    //public void PUN()
+    //{
+    //    //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    //    SceneManager.LoadScene("PunScreen");
+    //}
 
-    public void LoginScreen()
-    {
+    //public void LoginScreen()
+    //{
         
-        SceneManager.LoadScene("Login");
-    }
+    //    SceneManager.LoadScene("Login");
+    //}
 
 }

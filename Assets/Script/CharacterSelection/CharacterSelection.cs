@@ -21,9 +21,7 @@ public class CharacterSelection : MonoBehaviour
             go.SetActive(false);
 
         if (characterList[index])
-            characterList[index].SetActive(true);
-
-        
+            characterList[index].SetActive(true);       
         
     }
 
@@ -57,14 +55,11 @@ public class CharacterSelection : MonoBehaviour
 
         //Toggle on the new model
         characterList[index].SetActive(true);
-
-
-
     }
 
     public void ConfirmButton()
     {
         PlayerPrefs.SetInt("CharacterSelected", index);
-        SceneManager.LoadScene("EndlessRunning2");
+        SceneManager.LoadScene("Multiplayer");
     }
 }

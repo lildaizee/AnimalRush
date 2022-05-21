@@ -26,6 +26,6 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     {
 
         //base.OnConnectedToMaster();
-        SceneManager.LoadScene("Multiplayer");
+        SceneManager.LoadScene("ChooseCharacter");
     }
 }
