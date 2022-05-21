@@ -26,6 +26,9 @@ public class GameFlow : MonoBehaviour
     public Text scoreText;
     public int score = 0;
 
+    public Text invText;
+
+
     //public TMP_Text nilaiMarkah;
 
     void Start()
