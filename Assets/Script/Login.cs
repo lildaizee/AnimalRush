@@ -38,6 +38,12 @@ public class Login : MonoBehaviour
         }
     }
 
+    public void MainMenuScreen()
+    {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void GameScreen()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -48,6 +54,18 @@ public class Login : MonoBehaviour
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         SceneManager.LoadScene("PunScreen");
+    }
+
+    public void LoginScreen()
+    {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Login");
+    }
+
+    public void LeaderboardScreen()
+    {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Login");
     }
 
 }
