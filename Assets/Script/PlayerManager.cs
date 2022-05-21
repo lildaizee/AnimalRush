@@ -38,13 +38,18 @@ public class PlayerManager : MonoBehaviour
     public void leaderboardScreen()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        SceneManager.LoadScene("Leaderboard");
+        SceneManager.LoadScene("Leaderboard2");
     }
 
     public void MainMenuScreen()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void changeScene(string value)
+    {
+        SceneManager.LoadScene(value);
     }
 
 }

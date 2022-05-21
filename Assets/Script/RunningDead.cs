@@ -106,7 +106,7 @@ public class RunningDead : MonoBehaviour
     {
         yield return new WaitForSeconds(.1f);
         //FindObjectOfType<APISystem>().InsertPlayerActivity(PlayerPrefs.GetString("username"), "Score_Point_Endless", "add", ScoreManager.instance.ToString());
-        FindObjectOfType<APISystem>().InsertPlayerActivity(PlayerPrefs.GetString("username"), "Score_Point_Endless", "add", GameFlow.totalCoins.ToString());
+        FindObjectOfType<APISystem>().InsertPlayerActivity(PlayerPrefs.GetString("username"), "rankPoint", "add", GameFlow.totalCoins.ToString());
 
        
         Time.timeScale = 0;
