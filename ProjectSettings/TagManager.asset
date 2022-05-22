@@ -7,6 +7,7 @@ TagManager:
   - obstacle
   - Gem
   - Invisible
+  - SlowDown
   layers:
   - Default
   - TransparentFX

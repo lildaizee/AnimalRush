@@ -7,15 +7,26 @@ public class RunningDead : MonoBehaviour
 
     private string laneChange = "n";
     private string midJump = "n";
+    //public static Vector3 doodPos;
     public APISystem api;
+
+    [SerializeField] float speed;
+    private float boostTimer;
+    private bool boosting;
 
     void Start()
     {
-        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 5);
+        speed = 5;
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, speed);
+
+        boostTimer = 0;
+        boosting = false;
     }
 
     void Update()
     {
+        //doodPos = transform.position;
+
         if ((Input.GetKey("a")) && (laneChange == "n") && (transform.position.x > -.9) && (midJump == "n"))
         {
             GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 5);
@@ -36,6 +47,20 @@ public class RunningDead : MonoBehaviour
             GetComponent<Rigidbody>().velocity = new Vector3(0, 1, 5);
             midJump = "y";
             StartCoroutine(stopJump());
+        }
+
+        if (boosting)
+        {
+            boostTimer += Time.deltaTime;
+            if (boostTimer >= 1)
+            {
+                speed = 3;
+                GetComponent<Rigidbody>().velocity = new Vector3(0, 0, speed);
+                boostTimer = 0;
+                boosting = false;
+
+            }
+
         }
     }
 
@@ -86,11 +111,19 @@ public class RunningDead : MonoBehaviour
                
             Debug.Log("Invisible");
             GetComponent<Collider>().enabled = false;
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(5);
             GetComponent<Collider>().enabled = true;
 
             //StartCoroutine(enableCollider());
 
+        }
+
+        if (other.tag == "SlowDown")
+        {
+            Debug.Log("speed up");
+            boosting = true;
+            speed = 3;
+            //Destroy(gameObject);
         }
 
 
@@ -113,7 +146,7 @@ public class RunningDead : MonoBehaviour
 
         Debug.Log("Game Over");
         PlayerManager.isGameOver = true;
-        gameObject.SetActive(false);
+       //gameObject.SetActive(false);
     }
 
 }
