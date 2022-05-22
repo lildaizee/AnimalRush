@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/UI/Login.unity
     guid: 20798722b4a4a314cacd2e18ddb2e4f5
   - enabled: 1
+    path: Assets/UI/ChooseCharacter.unity
+    guid: d3422ee81f8997342bd344f40a28c789
+  - enabled: 1
     path: Assets/UI/Multiplayer.unity
     guid: f805073fe8af7424783d784324147a26
   - enabled: 1
@@ -20,10 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes1/LoseScreen.unity
     guid: f6506c3ab4260dd41b5c2f82aa92fa9f
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes2/Leaderboard.unity
-    guid: a3eee18a663a2544e8728f086f705fa9
-  - enabled: 1
-    path: Assets/Leaderboard/Leaderboard2.unity
     guid: 79018ea48c8e3ea4db64d97a1a78c584
   m_configObjects: {}
