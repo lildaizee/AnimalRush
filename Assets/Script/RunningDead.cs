@@ -125,9 +125,30 @@ public class RunningDead : MonoBehaviour
             speed = 3;
             //Destroy(gameObject);
         }
+        
+        if (other.tag == "floating")
+        {
+            Debug.Log("floating");
+            GetComponent<Rigidbody>().velocity = new Vector3(0, 3, 5);
+            StartCoroutine(stopFloating());
+
+        }
 
 
 
+    }
+
+    IEnumerator stopFloating()
+    {
+        
+        yield return new WaitForSeconds(.75f);
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 5);
+        yield return new WaitForSeconds(10);
+        GetComponent<Rigidbody>().velocity = new Vector3(0, -3, 5);
+        //Debug.Log("stop float");
+        yield return new WaitForSeconds(.75f);
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 5);
+        
     }
     //IEnumerator enableCollider()
     //{

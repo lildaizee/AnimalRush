@@ -8,6 +8,7 @@ TagManager:
   - Gem
   - Invisible
   - SlowDown
+  - floating
   layers:
   - Default
   - TransparentFX
