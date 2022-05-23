@@ -39,8 +39,8 @@ public class PlayerItem : MonoBehaviourPunCallbacks
     public void ApplyLocalChanges()
     {
         backgroundImage.color = hightlightColor;
-        leftArrowButton.SetActive(true);
-        rightArrowButton.SetActive(true);
+        //leftArrowButton.SetActive(true);
+        //rightArrowButton.SetActive(true);
     }
 
     public void onClickLeftArrow()
