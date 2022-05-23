@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 357210218}
   - component: {fileID: 357210217}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: MainMenuScript
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -555,6 +555,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1314024445, guid: 9dbe4e9b6690000449cf524489c5a30a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 357210217}
+    - target: {fileID: 1314024445, guid: 9dbe4e9b6690000449cf524489c5a30a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: leaderboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314024445, guid: 9dbe4e9b6690000449cf524489c5a30a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314024445, guid: 9dbe4e9b6690000449cf524489c5a30a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4508065766725404451, guid: 9dbe4e9b6690000449cf524489c5a30a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -706,6 +722,18 @@ PrefabInstance:
     - target: {fileID: 4508065768317019339, guid: 9dbe4e9b6690000449cf524489c5a30a, type: 3}
       propertyPath: m_Name
       value: Leaderboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982984784433857385, guid: 9dbe4e9b6690000449cf524489c5a30a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 357210217}
+    - target: {fileID: 7982984784433857385, guid: 9dbe4e9b6690000449cf524489c5a30a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoPlay
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982984784433857385, guid: 9dbe4e9b6690000449cf524489c5a30a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dbe4e9b6690000449cf524489c5a30a, type: 3}
