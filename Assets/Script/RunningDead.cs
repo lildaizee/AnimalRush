@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class RunningDead : MonoBehaviour
 {
+    public AudioClip slowSound;
+    public AudioClip invisibleSound;
+    public AudioClip floatingSound;
+
 
     private string laneChange = "n";
     private string midJump = "n";
@@ -108,7 +112,7 @@ public class RunningDead : MonoBehaviour
             //    Debug.Log(GameFlow.totalCoins);
             //    Destroy(gameObject);
             //}
-               
+            AudioSource.PlayClipAtPoint(invisibleSound, transform.position);
             Debug.Log("Invisible");
             GetComponent<Collider>().enabled = false;
             yield return new WaitForSeconds(5);
@@ -120,6 +124,7 @@ public class RunningDead : MonoBehaviour
 
         if (other.tag == "SlowDown")
         {
+            AudioSource.PlayClipAtPoint(slowSound, transform.position);
             Debug.Log("speed up");
             boosting = true;
             speed = 3;
@@ -128,6 +133,7 @@ public class RunningDead : MonoBehaviour
         
         if (other.tag == "floating")
         {
+            AudioSource.PlayClipAtPoint(floatingSound, transform.position);
             Debug.Log("floating");
             GetComponent<Rigidbody>().velocity = new Vector3(0, 3, 5);
             StartCoroutine(stopFloating());

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CoinCon : MonoBehaviour
 {
     public int totalScore;
+    public AudioClip scoreSound;
 
     void Start()
     {
@@ -25,7 +26,7 @@ public class CoinCon : MonoBehaviour
 
             //Debug.Log("point + 1");
             //ScoreManager.instance.AddPoint();
-
+            AudioSource.PlayClipAtPoint(scoreSound, transform.position);
             GameFlow.totalCoins += 1;
             Debug.Log(GameFlow.totalCoins);
             Destroy(gameObject);
