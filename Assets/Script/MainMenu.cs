@@ -20,4 +20,8 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Storytelling");
     }
 
+    public void MainMenuScreen()
+    {
+        SceneManager.LoadScene("Mainmenu");
+    }
 }
