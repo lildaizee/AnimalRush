@@ -15,4 +15,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Leaderboard");
     }
 
+    public void StorytellingScreen()
+    {
+        SceneManager.LoadScene("Storytelling");
+    }
+
 }

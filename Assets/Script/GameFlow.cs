@@ -12,8 +12,10 @@ public class GameFlow : MonoBehaviour
     private int randX;
     public Transform halanganObj2;
     private Vector3 nextHalanganSpawn2;
-    public Transform halanganObj3;
-    private Vector3 nextHalanganSpawn3;
+    //public Transform halanganObj3;
+    //private Vector3 nextHalanganSpawn3;
+    public Transform halanganObj3; //tukar hamburger
+    private Vector3 nextHalanganSpawn3; //tukar hamburger
     public Transform car;
     private Vector3 nextCarSpawn;
     private int randChoice;
@@ -21,7 +23,7 @@ public class GameFlow : MonoBehaviour
     public Transform coinObj;
     private Vector3 nextCoinSpawn;
     public Transform mushroom;
-    public Transform hamburger;
+    //public Transform hamburger;
     public Transform floating;
     private Vector3 nextPotionSpawn;
 
@@ -78,7 +80,7 @@ public class GameFlow : MonoBehaviour
             randX = 0;
         }
 
-        randChoice = Random.Range(0, 6);
+        randChoice = Random.Range(0, 5);
         if (randChoice == 0)
         {
             nextHalanganSpawn3.z = nextTileSpawn.z;
@@ -107,13 +109,13 @@ public class GameFlow : MonoBehaviour
             nextCarSpawn.x = randX;
             Instantiate(mushroom, nextCarSpawn, mushroom.rotation);
         }
-        else if (randChoice == 3)
-        {
-            nextCarSpawn.z = nextTileSpawn.z;
-            nextCarSpawn.y = .35f;
-            nextCarSpawn.x = randX;
-            Instantiate(hamburger, nextCarSpawn, hamburger.rotation);
-        }
+        //else if (randChoice == 3)
+        //{
+        //    nextCarSpawn.z = nextTileSpawn.z;
+        //    nextCarSpawn.y = .35f;
+        //    nextCarSpawn.x = randX;
+        //    Instantiate(hamburger, nextCarSpawn, hamburger.rotation);
+        //}
         else
         {
             nextCarSpawn.z = nextTileSpawn.z;
